@@ -3,7 +3,6 @@
 namespace OCA\Nodue\Controller;
 
 use OCP\AppFramework\Controller;
-use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
 
@@ -12,7 +11,7 @@ class MainController extends Controller
     private $userId;
 
     /**
-     * PageController constructor.
+     * MainController constructor.
      *
      * @param string        $appName
      * @param \OCP\IRequest $request

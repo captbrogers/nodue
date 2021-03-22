@@ -10,6 +10,12 @@
 return [
     'routes' => [
        ['name' => 'main#index', 'url' => '/', 'verb' => 'GET'],
+
+       ['name' => 'note#index', 'url' => '/notes', 'verb' => 'GET'],
+       ['name' => 'note#show', 'url' => '/notes/{noteId}', 'verb' => 'GET'],
+       ['name' => 'note#store', 'url' => '/notes', 'verb' => 'POST'],
+       ['name' => 'note#update', 'url' => '/notes/{noteId}', 'verb' => 'POST'],
+       ['name' => 'note#destroy', 'url' => '/notes/{noteId}', 'verb' => 'POST'],
        //['name' => 'page#do_echo', 'url' => '/echo', 'verb' => 'POST'],
     ]
 ];
