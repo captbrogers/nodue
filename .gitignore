@@ -2,6 +2,7 @@
 # Files
 .phpunit.result.cache
 npm-debug.log
+versions.ini
 yarn-error.log
 
 # Directories
