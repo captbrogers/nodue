@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Nodue\\": "lib/"
+      "OCA\\Nodue\\": "lib/"
     },
     "classmap": [
       "lib/"
@@ -30,7 +30,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "NodueTests\\": "tests/"
+      "OCA\\NodueTests\\": "tests/"
     },
     "classmap": [
       "tests/"
