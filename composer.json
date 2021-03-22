@@ -1,0 +1,15 @@
+{
+    "name": "Nodue",
+    "description": "Another note taking app.",
+    "type": "project",
+    "license": "AGPL",
+    "authors": [
+        {
+            "name": "Brian Rogers"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    }
+}

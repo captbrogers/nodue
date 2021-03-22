@@ -1,0 +1,26 @@
+### Project Specific
+# Files
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
+
+# Directories
+/node_modules
+/vendor
+
+### Editor Specific
+# Files
+nodue.sublime-project
+nodue.sublime-workspace
+
+# Directories
+.idea
+.vscode
+
+### System Specific
+# Files
+.DS_Store
+Thumbs.db
+
+# Directories
+__MACOSX
