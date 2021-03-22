@@ -1,15 +1,41 @@
 {
-    "name": "Nodue",
-    "description": "Another note taking app.",
-    "type": "project",
-    "license": "AGPL",
-    "authors": [
-        {
-            "name": "Brian Rogers"
-        }
-    ],
-    "require": {},
-    "require-dev": {
-        "phpunit/phpunit": "^5.4"
+  "name": "captbrogers/nodue",
+  "description": "Another note taking app.",
+  "type": "project",
+  "version": "0.1.0",
+  "license": "AGPL",
+  "authors": [
+    {
+      "name": "Brian Rogers"
     }
+  ],
+  "require": {
+    "php": ">=7.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0.3"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Nodue\\": "lib/"
+    },
+    "classmap": [
+      "lib/"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "NodueTests\\": "tests/"
+    },
+    "classmap": [
+      "tests/"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
