@@ -1,13 +1,13 @@
 <?php
 
-namespace OCA\{$namespace}\Migration;
+namespace OCA\Nodue\Migration;
 
 use Closure;
 use OCP\DB\ISchemaWrapper;
 use OCP\Migration\IOutput;
 use OCP\Migration\SimpleMigrationStep;
 
-class Version000100Date20212022142022 extends SimpleMigrationStep
+class Version000000Date20210322142022 extends SimpleMigrationStep
 {
     /**
     * @param IOutput $output
@@ -32,12 +32,24 @@ class Version000100Date20212022142022 extends SimpleMigrationStep
                 'notnull' => true,
                 'length'  => 200,
             ]);
+            $table->addColumn('acl_user_ids', 'text', [
+                'notnull' => true,
+                'default' => '[]'
+            ]);
             $table->addColumn('title', 'string', [
                 'notnull' => true,
                 'length'  => 200
             ]);
             $table->addColumn('content', 'text', [
                 'notnull' => true,
+                'default' => ''
+            ]);
+            $table->addColumn('created_at', 'datetime', [
+                'notnull' => true,
+                'default' => 'current_timestamp()'
+            ]);
+            $table->addColumn('updated_at', 'datetime', [
+                'notnull' => false,
                 'default' => ''
             ]);
 

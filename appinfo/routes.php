@@ -16,6 +16,7 @@ return [
        ['name' => 'note#store', 'url' => '/notes', 'verb' => 'POST'],
        ['name' => 'note#update', 'url' => '/notes/{noteId}', 'verb' => 'POST'],
        ['name' => 'note#destroy', 'url' => '/notes/{noteId}', 'verb' => 'POST'],
+
        //['name' => 'page#do_echo', 'url' => '/echo', 'verb' => 'POST'],
     ]
 ];
