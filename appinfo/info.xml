@@ -13,12 +13,12 @@
     <category>tools</category>
     <bugs>https://github.com/captbrogers/nodue/issues</bugs>
     <dependencies>
-        <nextcloud min-version="15" max-version="15"/>
+        <nextcloud min-version="15" max-version="21"/>
     </dependencies>
     <navigations>
         <navigation>
             <name>Nodue</name>
-            <route>nodue.page.index</route>
+            <route>nodue.main.index</route>
         </navigation>
     </navigations>
 </info>
