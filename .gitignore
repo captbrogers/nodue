@@ -5,6 +5,7 @@ npm-debug.log
 yarn-error.log
 
 # Directories
+/build
 /node_modules
 /vendor
 
