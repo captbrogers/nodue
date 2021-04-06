@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>nodue</id>
     <name>Nodue</name>
     <summary>Another note taking app.</summary>
@@ -9,12 +8,24 @@
     <licence>agpl</licence>
     <author mail="captbrogers@gmail.com" homepage="https://ditoforge.com">Brian Rogers</author>
     <namespace>Nodue</namespace>
+
     <category>organization</category>
     <category>tools</category>
+
+    <website>https://github.com/captbrogers/nodue</website>
     <bugs>https://github.com/captbrogers/nodue/issues</bugs>
+    <repository>https://github.com/captbrogers/nodue</repository>
+
     <dependencies>
-        <nextcloud min-version="15" max-version="21"/>
+        <nextcloud min-version="15"/>
+        <php min-version="7.3" min-int-size="64"/>
+        <database min-version="9.4">pgsql</database>
+        <database>sqlite</database>
+        <database min-version="5.7">mysql</database>
+        <database min-version="10.1">mariadb</database>
+        <lib>json</lib>
     </dependencies>
+
     <navigations>
         <navigation>
             <name>Nodue</name>

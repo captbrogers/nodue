@@ -1,3 +1,120 @@
-#hello {
-	color: red;
+#nodue-app { width: 100%; }
+
+#nodue-app #app-content-wrapper { padding-right: 2rem; padding-left: 2rem; }
+
+#nodue-app .nodue-grid {
+    /*display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr 1fr;
+    grid-template-areas:
+        "quicknew"
+        "pinnednotes"
+        "notes";*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
+
+#nodue-app .nodue-quicknew {
+    /*display: grid;
+    grid-area: quicknew;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nodue-app .nodue-quicknew .content-editable {
+    border: 1px solid #c3c3c3;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 30%), 0 2px 6px 2px rgba(60, 64, 67, 15%);
+    width: 800px;
+}
+
+#nodue-app .nodue-quicknew .content-editable .note-title,
+#nodue-app .nodue-quicknew .content-editable .note-body {
+    background-color: white;
+    border: none;
+    color: #202124;
+    padding: 1em;
+    font-size: 1.25em;
+    line-height: 1.33em;
+    margin: 0;
+    width: 100%;
+}
+
+#nodue-app .nodue-quicknew .content-editable .note-actions {
+    padding: 0.75em;
+}
+
+#nodue-app .nodue-quicknew .content-editable .note-title {}
+#nodue-app .nodue-quicknew .content-editable .note-body {}
+
+#nodue-app .nodue-pinned {
+    /*display: grid;
+    grid-area: pinnednotes;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". . . .";*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#nodue-app .nodue-notes {
+    /*display: grid;
+    grid-area: notes;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". . . .";*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#nodue-app .nodue-pinned,
+#nodue-app .nodue-notes {
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#nodue-app .nodue-pinned {}
+
+#nodue-app .nodue-notes {}
+
+#nodue-app .nodue-notes .notes-list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#nodue-app .nodue-note {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid #c3c3c3;
+    width: 350px;
+    margin-right: 2em;
+    margin-bottom: 2.5em;
+}
+
+/*#nodue-app .nodue-note:not(:first-of-type) {
+    margin-left: 2em;
+}*/
+
+#nodue-app .nodue-note_header .note-title,
+#nodue-app .nodue-note_body {
+    padding: 1em;
+}
+
+#nodue-app .nodue-note_header {}
+
+#nodue-app .nodue-note_header .note-title {
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+#nodue-app .nodue-note_body {}

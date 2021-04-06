@@ -12,6 +12,7 @@ return [
        ['name' => 'main#index', 'url' => '/', 'verb' => 'GET'],
 
        ['name' => 'note#index', 'url' => '/notes', 'verb' => 'GET'],
+       ['name' => 'note#pinned', 'url' => '/pinned-notes', 'verb' => 'GET'],
        ['name' => 'note#show', 'url' => '/notes/{noteId}', 'verb' => 'GET'],
        ['name' => 'note#store', 'url' => '/notes', 'verb' => 'POST'],
        ['name' => 'note#update', 'url' => '/notes/{noteId}', 'verb' => 'POST'],

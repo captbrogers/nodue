@@ -1,10 +1,11 @@
 <ul>
-    <li><a href="#">First level entry</a></li>
     <li>
-        <a href="#">First level container</a>
-        <ul>
-            <li><a href="#">Second level entry</a></li>
-            <li><a href="#">Second level entry</a></li>
-        </ul>
+        <a href="#">Notes</a>
+    </li>
+    <li>
+        <a href="#">Archived</a>
+    </li>
+    <li>
+        <a href="#">Trash</a>
     </li>
 </ul>

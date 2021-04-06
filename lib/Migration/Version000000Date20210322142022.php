@@ -36,6 +36,9 @@ class Version000000Date20210322142022 extends SimpleMigrationStep
                 'notnull' => true,
                 'default' => '[]'
             ]);
+            $table->addColumn('is_pinned', 'boolean', [
+                'default' => false
+            ]);
             $table->addColumn('title', 'string', [
                 'notnull' => true,
                 'length'  => 200
@@ -45,12 +48,10 @@ class Version000000Date20210322142022 extends SimpleMigrationStep
                 'default' => ''
             ]);
             $table->addColumn('created_at', 'datetime', [
-                'notnull' => true,
-                'default' => 'current_timestamp()'
+                'notnull' => false,
             ]);
             $table->addColumn('updated_at', 'datetime', [
                 'notnull' => false,
-                'default' => ''
             ]);
 
             $table->setPrimaryKey(['id']);
