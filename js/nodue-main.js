@@ -10303,25 +10303,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 // imports go here
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'QuickNew',
   props: {},
 
   data() {
-    return {};
+    return {
+      note: {
+        title: '',
+        content: '',
+        is_pinned: false
+      }
+    };
   },
 
   computed: {},
 
   mounted() {},
 
-  methods: {}
+  methods: {
+    cancelNewNote() {},
+
+    createNote() {}
+
+  }
 });
 
 /***/ }),
@@ -18108,42 +18114,89 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "nodue-quicknew" }, [
+    _c(
+      "form",
+      {
+        staticClass: "content-editable",
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.createNote()
+          }
+        }
+      },
+      [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.note.title,
+              expression: "note.title"
+            }
+          ],
+          staticClass: "note-title",
+          attrs: {
+            type: "text",
+            spellcheck: "true",
+            "aria-label": "Title",
+            placeholder: "Title"
+          },
+          domProps: { value: _vm.note.title },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.note, "title", $event.target.value)
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("textarea", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.note.content,
+              expression: "note.content"
+            }
+          ],
+          staticClass: "note-body",
+          attrs: {
+            spellcheck: "true",
+            "aria-label": "A New Note...",
+            placeholder: "A New Note..."
+          },
+          domProps: { value: _vm.note.content },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.$set(_vm.note, "content", $event.target.value)
+            }
+          }
+        }),
+        _vm._v(" "),
+        _vm._m(0)
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "nodue-quicknew" }, [
-      _c("div", { staticClass: "content-editable" }, [
-        _c("div", {
-          staticClass: "note-title",
-          attrs: {
-            role: "textbox",
-            contenteditable: "true",
-            spellcheck: "true",
-            "aria-label": "Title"
-          }
-        }),
-        _vm._v(" "),
-        _c("div", {
-          staticClass: "note-body",
-          attrs: {
-            role: "textbox",
-            contenteditable: "true",
-            spellcheck: "true",
-            "aria-label": "A New Note..."
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "note-actions" }, [
-          _c(
-            "button",
-            { staticClass: "close-button", attrs: { type: "button" } },
-            [_vm._v("Close")]
-          )
-        ])
+    return _c("div", { staticClass: "note-actions" }, [
+      _c("button", { staticClass: "nodue-button", attrs: { type: "submit" } }, [
+        _vm._v("Save")
+      ]),
+      _vm._v(" "),
+      _c("button", { staticClass: "close-button", attrs: { type: "button" } }, [
+        _vm._v("Cancel")
       ])
     ])
   }
@@ -27201,4 +27254,4 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].mixin({
 /***/ })
 
 /******/ });
-//# sourceMappingURL=nodue-main.js.map?v=868173fdf888d5d731f9
+//# sourceMappingURL=nodue-main.js.map?v=f9185d0ac525dfba9ad6

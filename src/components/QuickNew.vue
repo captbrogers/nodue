@@ -1,22 +1,17 @@
 <template>
 	<div class="nodue-quicknew">
-		<div class="content-editable">
-			<div class="note-title"
-				role="textbox"
-				contenteditable="true"
+		<form class="content-editable" @submit.prevent="createNote()">
+			<input type="text" class="note-title" v-model="note.title" spellcheck="true" aria-label="Title" placeholder="Title">
+			<textarea class="note-body"
 				spellcheck="true"
-				aria-label="Title">
-			</div>
-			<div class="note-body"
-				role="textbox"
-				contenteditable="true"
-				spellcheck="true"
-				aria-label="A New Note...">
-			</div>
+				aria-label="A New Note..."
+				placeholder="A New Note..." 
+				v-model="note.content"></textarea>
 			<div class="note-actions">
-				<button type="button" class="close-button">Close</button>
+				<button type="submit" class="nodue-button">Save</button>
+				<button type="button" class="close-button">Cancel</button>
 			</div>
-		</div>
+		</form>
 	</div>
 </template>
 
@@ -24,19 +19,29 @@
 // imports go here
 
 export default {
-  name: 'QuickNew',
+	name: 'QuickNew',
 
-  props: {},
+	props: {},
 
-  data() {
-		return {}
-  },
+	data() {
+		return {
+			note: {
+				title: '',
+				content: '',
+				is_pinned: false,
+			},
+		}
+	},
 
-  computed: {},
+	computed: {},
 
-  mounted() {},
+	mounted() {},
 
-  methods: {},
+	methods: {
+		cancelNewNote() {},
+
+		createNote() {},
+	},
 }
 </script>
 
